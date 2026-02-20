@@ -343,12 +343,95 @@
 // console.log("Last Line")
 
 
-async function getdata(){
- const response=await fetch("https://dummyjson.com/products")
- const data=await response.json()
-// console.log(data.products[6].title)
- data.products.forEach((product)=>{
-    console.log(product.title)
- })
+// async function getdata(){
+//  const response=await fetch("https://dummyjson.com/products")
+//  const data=await response.json()
+// // console.log(data.products[6].title)
+//  data.products.forEach((product)=>{
+//     console.log(product.title)
+//  })
+// }
+// getdata()
+
+// async function getdata(){
+
+//     try{
+//          const response = await fetch("https://dummyjson.com/products/200")
+//          if (response.ok=== false){
+//          throw new Error("something went wrong")
+//          }
+//          const data = await response.json()
+//          console.log(data)
+//          // console.log(data.products[0].title)
+//          data.products.forEach((product)=>{
+//          console.log(product.title)
+//          })
+
+//     }catch(error){
+//     console.log(error)
+//     }finally{
+//     console.log("finally block")
+//     }
+
+// }
+// getdata()
+// sending data to api or backend
+// async function sendData() {
+//    const response=await fetch('https://dummyjson.com/products/add',{
+//       method:'POST',
+//       headers:{
+//          "Content-Type":"application/json"
+//       },
+//       body:JSON.stringify({
+//          title:"New Product",
+//          description:"This is a new product",
+//          price:100,
+//          discountPercentage:10,
+//          rating:4.5,
+//          stock:50,
+//          brand:"ABC",
+//          category:"Electronics"
+//       })
+//    })
+//    const data=await response.json()
+//    console.log(data)
+   
+// }
+// sendData()
+
+// local storage
+// //Store data
+// localStorage.setItem("username","Prateek");
+// localStorage.setItem('age',45)
+
+// //Get data
+// console.log(localStorage.getItem("username"))
+// console.log(localStorage.getItem("age"))
+
+// localStorage.removeItem('name')
+// console.log(localStorage.getItem('name')) //null
+
+
+// sending data to api or backend
+async function sendData() {
+   const response=await fetch('https://dummyjson.com/products/add',{
+      method:'POST',
+      headers:{
+         "Content-Type":"application/json"
+      },
+      body:JSON.stringify({
+         title:"New Product",
+         description:"This is a new product",
+         price:100,
+         discountPercentage:10,
+         rating:4.5,
+         stock:50,
+         brand:"ABC",
+         category:"Electronics"
+      })
+   })
+   const data=await response.json()
+   console.log(data)
+   
 }
-getdata()
+sendData()
