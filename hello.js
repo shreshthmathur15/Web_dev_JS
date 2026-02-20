@@ -400,38 +400,37 @@
 // sendData()
 
 // local storage
-// //Store data
-// localStorage.setItem("username","Prateek");
-// localStorage.setItem('age',45)
+//Store data
+localStorage.setItem("username","Prateek");
+localStorage.setItem('age',45)
 
-// //Get data
-// console.log(localStorage.getItem("username"))
-// console.log(localStorage.getItem("age"))
+//Get data
+console.log(localStorage.getItem("username"))
+console.log(localStorage.getItem("age"))
 
-// localStorage.removeItem('name')
-// console.log(localStorage.getItem('name')) //null
-
+localStorage.removeItem('name')
+console.log(localStorage.getItem('name'))
 
 // sending data to api or backend
-async function sendData() {
-   const response=await fetch('https://dummyjson.com/products/add',{
-      method:'POST',
-      headers:{
-         "Content-Type":"application/json"
-      },
-      body:JSON.stringify({
-         title:"New Product",
-         description:"This is a new product",
-         price:100,
-         discountPercentage:10,
-         rating:4.5,
-         stock:50,
-         brand:"ABC",
-         category:"Electronics"
-      })
-   })
-   const data=await response.json()
-   console.log(data)
+// async function sendData() {
+//    const response=await fetch('https://dummyjson.com/products/add',{
+//       method:'POST',
+//       headers:{
+//          "Content-Type":"application/json"
+//       },
+//       body:JSON.stringify({
+//          title:"New Product",
+//          description:"This is a new product",
+//          price:100,
+//          discountPercentage:10,
+//          rating:4.5,
+//          stock:50,
+//          brand:"ABC",
+//          category:"Electronics"
+//       })
+//    })
+//    const data=await response.json()
+//    console.log(data)
    
-}
-sendData()
+// }
+// sendData()
