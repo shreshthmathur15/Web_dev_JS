@@ -401,15 +401,15 @@
 
 // local storage
 //Store data
-localStorage.setItem("username","Prateek");
-localStorage.setItem('age',45)
+// localStorage.setItem("username","Prateek");
+// localStorage.setItem('age',45)
 
-//Get data
-console.log(localStorage.getItem("username"))
-console.log(localStorage.getItem("age"))
+// //Get data
+// console.log(localStorage.getItem("username"))
+// console.log(localStorage.getItem("age"))
 
-localStorage.removeItem('name')
-console.log(localStorage.getItem('name'))
+// localStorage.removeItem('name')
+// console.log(localStorage.getItem('name'))
 
 // sending data to api or backend
 // async function sendData() {
@@ -434,3 +434,28 @@ console.log(localStorage.getItem('name'))
    
 // }
 // sendData()
+
+// COOKIES 
+
+document.cookie="name=54;expires=Wed,25 Feb 2026 23:59:59 GMT"
+document.cookie="age=45;expires=Wed,25 Feb 2026 23:59:59 GMT"
+
+console.log(document.cookie)
+
+function generate(){
+    // yield 1;
+    // yield 2;
+    // yield 3;
+    let index=25017343
+     while(true){
+        yield index;
+        index+=1
+    }
+}
+
+const gen=generate()
+console.log(gen)
+console.log(gen.next())
+console.log(gen.next())
+console.log(gen.next())
+console.log(gen.next())
