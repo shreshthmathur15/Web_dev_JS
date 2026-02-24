@@ -437,25 +437,39 @@
 
 // COOKIES 
 
-document.cookie="name=54;expires=Wed,25 Feb 2026 23:59:59 GMT"
-document.cookie="age=45;expires=Wed,25 Feb 2026 23:59:59 GMT"
+// document.cookie="name=54;expires=Wed,25 Feb 2026 23:59:59 GMT"
+// document.cookie="age=45;expires=Wed,25 Feb 2026 23:59:59 GMT"
 
-console.log(document.cookie)
+// console.log(document.cookie)
 
-function generate(){
-    // yield 1;
-    // yield 2;
-    // yield 3;
-    let index=25017343
-     while(true){
-        yield index;
-        index+=1
+// function generate(){
+//     // yield 1;
+//     // yield 2;
+//     // yield 3;
+//     let index=25017343
+//      while(true){
+//         yield index;
+//         index+=1
+//     }
+// }
+
+// const gen=generate()
+// console.log(gen)
+// console.log(gen.next())
+// console.log(gen.next())
+// console.log(gen.next())
+// console.log(gen.next())
+
+
+function add(a){
+    return function(b){
+        return function(c){
+            return a+b+c
+        }
     }
 }
-
-const gen=generate()
-console.log(gen)
-console.log(gen.next())
-console.log(gen.next())
-console.log(gen.next())
-console.log(gen.next())
+const first=add(1)
+console.log(first)
+const second=first(2)
+console.log(second)
+console.log(second(3))
